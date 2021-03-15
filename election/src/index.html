@@ -9,45 +9,81 @@
 		<header>
 			<h1><a class="home" href="/">Oregon's Unofficial Blockchain-Based Voting System</a></h1>
 			<div class="slideshow">
-				<img class="mySlides" src="americanFlag.jpg">
-				<img class="mySlides" src="oregon.jpg">
-				<img class="mySlides" src="vote.jpg">
+				<img class="pictures" src="americanFlag.jpg">
+				<img class="pictures" src="oregon.jpg">
+				<img class="pictures" src="vote.jpg">
 			</div>
 		</header>
 		<div>
 			<h3>Sign In</h3>
-			<form target="i.html"  method="get">
+			<form  method="get">
 			  <label for="fname">First Name:</label>
 			  <input type="text" id="fname" name="fname"><br><br>
 			  <label for="lname">Last Name:</label>
 			  <input type="text" id="lname" name="lname"><br><br>
 			  <label for="lname">Email:</label>
-			  <input type="text" id="lname" name="number"><br><br>
+			  <input type="text" id="email" name="email"><br><br>
 			  <label for="lname">Phone Number:</label>
-			  <input type="text" id="lname" name="ssn"><br><br>
+			  <input type="text" id="phone" name="phone"><br><br>
 			  <label for="lname">Social Security Number:</label>
-			  <input type="text" id="lname" name="license"><br><br>
+			  <input type="text" id="ssn" name="ssn"><br><br>
 			  <label for="lname">Driver's License Number:</label>
-			  <input type="text" id="lname" name="lname"><br><br>
-			  <a href="i.html">Sign In</a>
+			  <input type="text" id="license" name="license"><br><br>
+			  <input type="button" class="button" value="Login" onClick="auth(this.form)"/>
 			</form>
 		</div>
 		<br></br>
 	</body>
 	<script>
-		var slideIndex = 0;
-		carousel();
+		var num = 0;
+		slide_show();
 
-		function carousel() {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  for (i = 0; i < x.length; i++) {
-		    x[i].style.display = "none";
-		  }
-		  slideIndex++;
-		  if (slideIndex > x.length) {slideIndex = 1}
-		  x[slideIndex-1].style.display = "block";
-		  setTimeout(carousel, 2000);
+		function slide_show()
+		{
+			var i;
+			var pics = document.getElementsByClassName("pictures");
+			for (i = 0; i < pics.length; i++)
+			{
+				pics[i].style.display = "none";
+			}
+			num++;
+			if (num > pics.length)
+			{
+				num = 1
+			}
+			pics[num - 1].style.display = "block";
+			setTimeout(slide_show, 1700);
+		}
+
+		function auth(form)
+		{
+			var login_creds = form.fname.value + "," + form.lname.value + "," + form.email.value + "," + form.phone.value + "," + form.ssn.value + "," + form.license.value;
+			// READ IN VOTERS.CSV HERE
+			if (login_creds == "Jun,Li,lijun@cs.uoregon.edu,0,0,0" || login_creds == "John,Doe,jdoe@gmail.com,0,0,0")
+			{
+				location = "i.html" 
+			}
+			else
+			{
+				alert("Invalid login credentials")
+			}
+
+			// Then the below code will work
+			// var found = 0;
+			// while(typeof voters !== "undefined")
+			// {
+			// 	var voter = voters.shift();
+			// 	if (login_creds == voter) {
+			// 		found = 1; 
+			// 	}
+
+			// }
+			// if (found) {
+			// 	location="i.html" 
+			// }
+			// else {
+			// 	alert("Invalid login credentials")
+			// }
 		}
 	</script>
 </html>

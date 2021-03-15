@@ -1,0 +1,2 @@
+John,Doe,jdoe@gmail.com,0,0,0
+Jun,Li,lijun@cs.uoregon.edu,0,0,0
