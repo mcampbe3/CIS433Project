@@ -8,9 +8,13 @@ Follow the installation instructions.
 $ ./setup.sh
 ## setup.sh runs the following commands:
 $ brew install node
+
 $ npm install -g ganache
+
 $ npm install -g truffle
+
 $ npm install -g solc
+
 $ npm install lite-server --save-dev
 
 ## Next, open Ganache and select quick start, you should see a list of ETH accounts.
