@@ -32,9 +32,13 @@ At this point you should see the sign-in page with several forms, sign in using:
 - Follow the sign-in process, saving your secret key
 - Select the networks tab, and select ‘custom RPC’
 - Input the following information:
+
 	-- Network Name: election
+
 	-- New RPC URL: http://localhost:7545
+
 	-- Chain ID: 1337
+	
 	-- Currency Symbol: ETH
 
 ## Navigate to Ganache on your computer
