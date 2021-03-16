@@ -2,7 +2,7 @@
 
 ## Start by installing the MetaMask chrome extension which can be found here:
 https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en
-## Follow the installation instructions.
+Follow the installation instructions.
 
 ## In order to run this program, navigate to the election directory and input the following commands into your terminal. THE PROGRAM MUST BE RUN ON GOOGLE CHROME.
 $ ./setup.sh
@@ -21,7 +21,7 @@ $ ./run_program.sh
 $ truffle migrate --reset
 $ npm run dev
 
-## At this point you should see the sign-in page with several forms, sign in using: [ John, Doe, jdoe@gmail.com, 0, 0, 0 ] or [ Jun, Li, lijun@cs.uoregon.edu, 0, 0, 0 ] where each of these items is placed in their respective field. After successful sign-in, you should see the Oregon State flag, and a loading icon.
+At this point you should see the sign-in page with several forms, sign in using: [ John, Doe, jdoe@gmail.com, 0, 0, 0 ] or [ Jun, Li, lijun@cs.uoregon.edu, 0, 0, 0 ] where each of these items is placed in their respective field. After successful sign-in, you should see the Oregon State flag, and a loading icon.
 
 ## Now sign into MetaMask, the method for sending currency on the blockchain. Some extra steps are going to be completed here since the site is hosted locally.
 - Click the MetaMask chrome extension
