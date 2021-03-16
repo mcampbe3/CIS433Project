@@ -2,6 +2,7 @@
 
 ## Start by installing the MetaMask chrome extension which can be found here:
 https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en
+
 Follow the installation instructions.
 
 ## In order to run this program, navigate to the election directory and input the following commands into your terminal. THE PROGRAM MUST BE RUN ON GOOGLE CHROME.
@@ -38,7 +39,7 @@ At this point you should see the sign-in page with several forms, sign in using:
 	-- New RPC URL: http://localhost:7545
 
 	-- Chain ID: 1337
-	
+
 	-- Currency Symbol: ETH
 
 ## Navigate to Ganache on your computer
